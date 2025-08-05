@@ -31,8 +31,9 @@ Tu flujo de conversación debe ser el siguiente:
 `;
 
 function initializeChat(): Chat {
+  // La clave de API se obtiene directamente de las variables de entorno del proceso.
   if (!process.env.API_KEY) {
-    throw new Error("La clave de API no está configurada. El bot no puede funcionar.");
+    throw new Error("Error: La API Key de Gemini no está configurada. Por favor, ve a la pestaña 'Secrets' (usualmente en el panel izquierdo) y añade una nueva variable llamada 'API_KEY' con tu clave secreta.");
   }
 
   const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
