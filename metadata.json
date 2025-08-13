@@ -6,10 +6,6 @@
     {
       "name": "API_KEY",
       "description": "Clave de API de Google Gemini para que el chatbot funcione."
-    },
-    {
-      "name": "RESTAURANT_WHATSAPP_NUMBER",
-      "description": "Número de WhatsApp del restaurante (código de país + número, sin '+') para confirmar pedidos. Si no se define, se usará un valor por defecto."
     }
   ],
   "prompt": ""
