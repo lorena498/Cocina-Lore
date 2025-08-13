@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: linear-gradient(rgba(29, 25, 23, 0.6), rgba(29, 25, 23, 0.6)), url('https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?q=80&w=2940&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

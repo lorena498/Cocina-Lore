@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { Message } from '../types';
 import ChatMessage from './ChatMessage';
@@ -25,15 +24,15 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ messages, isLoading }) => {
       ))}
       {isLoading && (
         <div className="flex items-start gap-3 my-4 justify-start">
-          <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-600 flex items-center justify-center text-orange-400">
+          <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-brand-primary">
             <BotIcon />
           </div>
-          <div className="max-w-md lg:max-w-lg p-4 rounded-2xl shadow-md bg-gray-700 text-white rounded-bl-none">
-            <div className="flex items-center justify-center space-x-1">
-              <span className="text-gray-400">Escribiendo</span>
-              <div className="w-2 h-2 bg-orange-400 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
-              <div className="w-2 h-2 bg-orange-400 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
-              <div className="w-2 h-2 bg-orange-400 rounded-full animate-bounce"></div>
+          <div className="max-w-md lg:max-w-lg p-4 rounded-2xl shadow-md bg-brand-surface text-white rounded-bl-none">
+            <div className="flex items-center justify-center space-x-1.5">
+              <span className="text-gray-300">Escribiendo</span>
+              <div className="w-2 h-2 bg-brand-primary rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+              <div className="w-2 h-2 bg-brand-primary rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+              <div className="w-2 h-2 bg-brand-primary rounded-full animate-bounce"></div>
             </div>
           </div>
         </div>

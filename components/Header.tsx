@@ -13,18 +13,18 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-gray-800/50 backdrop-blur-sm p-4 border-b border-orange-500/30 shadow-lg fixed top-0 left-0 right-0 z-10">
-      <div className="max-w-4xl mx-auto flex justify-between items-center">
+    <header className="bg-brand-background/80 backdrop-blur-md p-4 border-b border-brand-primary/30 shadow-lg z-10 flex-shrink-0">
+      <div className="w-full mx-auto flex justify-between items-center">
         <div>
-          <h1 className="text-2xl font-bold text-white">
+          <h1 className="text-2xl font-bold text-white font-display">
             El Sabor Digital
           </h1>
-          <p className="text-sm text-orange-400">Asistente de Pedidos</p>
+          <p className="text-sm text-brand-primary-hover">Asistente de Pedidos</p>
         </div>
         
         <button
           onClick={handleShare}
-          className="inline-flex items-center gap-2 px-3 py-2 bg-green-500 text-white font-semibold text-sm rounded-lg shadow-md hover:bg-green-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-green-500"
+          className="inline-flex items-center gap-2 px-3 py-2 bg-green-500 text-white font-semibold text-sm rounded-lg shadow-md hover:bg-green-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-brand-background focus:ring-green-500"
           aria-label="Compartir en WhatsApp"
         >
           <WhatsAppIcon />

@@ -1,4 +1,3 @@
-
 import { GoogleGenAI, Chat, GenerateContentResponse } from "@google/genai";
 
 let chat: Chat | null = null;
@@ -31,11 +30,9 @@ Tu flujo de conversación debe ser el siguiente:
 `;
 
 function initializeChat(): Chat {
-  // La clave de API se obtiene directamente de las variables de entorno del proceso.
-  if (!process.env.API_KEY) {
-    throw new Error("Error: La API Key de Gemini no está configurada. Por favor, ve a la pestaña 'Secrets' (usualmente en el panel izquierdo) y añade una nueva variable llamada 'API_KEY' con tu clave secreta.");
-  }
-
+  // Se eliminó la comprobación explícita de la API Key.
+  // La validación ahora se hace en la UI para una mejor experiencia de usuario.
+  // El SDK de Gemini manejará los errores si la clave no es válida al momento de la llamada.
   const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
   return ai.chats.create({
