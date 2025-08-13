@@ -8,7 +8,7 @@ interface WhatsAppButtonProps {
 
 const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ orderText }) => {
     // El número de WhatsApp se obtiene de las variables de entorno para facilitar la configuración.
-    // Incluye el código de país, sin '+' ni espacios. Por ejemplo: '523148721913'.
+    // Si no se define, se usa un valor por defecto.
     const phoneNumber = process.env.RESTAURANT_WHATSAPP_NUMBER || '523141441927';
 
     useEffect(() => {
@@ -17,14 +17,14 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ orderText }) => {
 `********************************************************************************
 El número de WhatsApp no está configurado. Usando valor por defecto.
 Para configurar tu propio número, define el secreto 'RESTAURANT_WHATSAPP_NUMBER'.
+Formato: código de país + número, sin '+' ni espacios (ej: 521234567890).
 ********************************************************************************`
             );
         }
     }, []);
 
-
     const message = `¡Hola! Quisiera confirmar mi pedido:\n\n${orderText}`;
-    const whatsappUrl = `https://wa.me/${523141441927}?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     return (
         <a
