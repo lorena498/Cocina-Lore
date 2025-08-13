@@ -7,8 +7,10 @@ interface WhatsAppButtonProps {
 }
 
 const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ orderText }) => {
-    // Número de WhatsApp del restaurante (código de país + número)
-    const phoneNumber = '523141442197';
+    // Obtiene el número de WhatsApp de las variables de entorno de Vite.
+    // El número de respaldo '523141442197' se usa si VITE_WHATSAPP_NUMBER no está definido.
+    // Puedes cambiar este número configurando el secreto 'VITE_WHATSAPP_NUMBER'.
+    const phoneNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '523141442197';
 
     const message = `¡Hola! Quisiera confirmar mi pedido:\n\n${orderText}`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;

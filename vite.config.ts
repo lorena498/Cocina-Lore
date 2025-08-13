@@ -10,8 +10,8 @@ export default defineConfig(({ mode }) => {
     plugins: [react()],
     // Define las variables de entorno para que estén disponibles en el código del cliente
     define: {
-      // Vite reemplazará `process.env.API_KEY` en el código con el valor real
-      // de la variable de entorno `API_KEY` durante el proceso de compilación.
+      // Vite reemplazará `process.env.VAR` en el código con el valor real
+      // de la variable de entorno durante el proceso de compilación.
       'process.env.API_KEY': JSON.stringify(env.API_KEY)
     }
   }
