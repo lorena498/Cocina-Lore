@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   // Carga las variables de entorno del directorio raíz
-  const env = loadEnv(mode, process.cwd(), '');
+  const env = loadEnv(mode, '', '');
 
   return {
     plugins: [react()],
@@ -12,7 +12,8 @@ export default defineConfig(({ mode }) => {
     define: {
       // Vite reemplazará `process.env.API_KEY` en el código con el valor real
       // de la variable de entorno `API_KEY` durante el proceso de compilación.
-      'process.env.API_KEY': JSON.stringify(env.API_KEY)
+      'process.env.API_KEY': JSON.stringify(env.API_KEY),
+      'process.env.RESTAURANT_WHATSAPP_NUMBER': JSON.stringify(env.RESTAURANT_WHATSAPP_NUMBER)
     }
   }
 })
