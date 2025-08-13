@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { WhatsAppIcon } from './Icons';
 
@@ -7,9 +6,8 @@ interface WhatsAppButtonProps {
 }
 
 const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ orderText }) => {
-    // TODO: Reemplaza este número con el número de WhatsApp de tu restaurante.
-    // Incluye el código de país, sin '+' ni espacios. Por ejemplo: '523148721913'.
-    const aphoneNumber = '523148721913';
+    // Número de WhatsApp del restaurante (código de país + número)
+    const aphoneNumber = '5213141441927';
     const message = `¡Hola! Quisiera confirmar mi pedido:\n\n${orderText}`;
     const whatsappUrl = `https://wa.me/${aphoneNumber}?text=${encodeURIComponent(message)}`;
 
@@ -18,7 +16,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ orderText }) => {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-3 inline-flex items-center gap-3 px-4 py-2 bg-green-500 text-white font-bold rounded-lg shadow-md hover:bg-green-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-green-500"
+            className="mt-3 inline-flex items-center gap-3 px-4 py-2 bg-green-500 text-white font-bold rounded-lg shadow-md hover:bg-green-600"
             aria-label="Confirmar Pedido por WhatsApp"
         >
             <WhatsAppIcon />
